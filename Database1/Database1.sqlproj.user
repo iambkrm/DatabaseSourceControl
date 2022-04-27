@@ -3,5 +3,7 @@
   <PropertyGroup>
     <TargetDatabase>ZenopleMaster</TargetDatabase>
     <TargetConnectionString>Data Source=AQ-DELL2203PC98;Initial Catalog=ZenopleMaster;Integrated Security=True;Persist Security Info=False;Pooling=False;Multiple Active Result Sets=False;Encrypt=False;Trust Server Certificate=False</TargetConnectionString>
+    <StartupScript>(Blank)</StartupScript>
+    <StartAction>StartNone</StartAction>
   </PropertyGroup>
 </Project>
