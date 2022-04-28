@@ -1,5 +1,5 @@
 ﻿/*
-    Generated date:     2022-04-28T20:27:38Z
+    Generated date:     2022-04-28T20:51:35Z
     Generated on:       AQ-DELL2203PC98
     Package version:    
     Migration version:  (n/a)
@@ -331,6 +331,73 @@ GO
 IF NOT EXISTS (SELECT 1 FROM [$(DatabaseName)].[dbo].[__MigrationLogCurrent] WHERE [migration_id] = CAST ('ae2f544d-84a6-49ed-b004-2509515f614e' AS UNIQUEIDENTIFIER))
   INSERT [$(DatabaseName)].[dbo].[__MigrationLog] ([migration_id], [script_checksum], [script_filename], [complete_dt], [applied_by], [deployed], [version], [package_version], [release_version])
   VALUES                                         (CAST ('ae2f544d-84a6-49ed-b004-2509515f614e' AS UNIQUEIDENTIFIER), 'ACB2008003AB03B133B5D434023C8722A0B353CFDF887E389195FFA99907AEF4', 'Migrations\001_20220428-2023_bikram.neupane.sql', SYSDATETIME(), SYSTEM_USER, 1, NULL, '$(PackageVersion)', CASE '$(ReleaseVersion)' WHEN '' THEN NULL ELSE '$(ReleaseVersion)' END);
+
+GO
+SET IMPLICIT_TRANSACTIONS, NUMERIC_ROUNDABORT OFF;
+SET ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS, ARITHABORT, CONCAT_NULL_YIELDS_NULL, NOCOUNT, QUOTED_IDENTIFIER ON;
+
+GO
+IF DB_NAME() != '$(DatabaseName)'
+  USE [$(DatabaseName)];
+
+GO
+IF NOT EXISTS (SELECT 1 FROM [$(DatabaseName)].[dbo].[__MigrationLogCurrent] WHERE [migration_id] = CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER) AND [script_checksum] = '1645B4747BF4D0015923F6C7A356861CA29915F5C8F9044A93B08599E267A767')
+  PRINT '
+
+***** EXECUTING MIGRATION "Programmable Objects\dbo\Stored Procedures\SpBikramAutomationCheck.sql", ID: {e29068fc-f879-53c0-ae3c-67423b967176} *****';
+
+GO
+IF EXISTS (SELECT 1 FROM [$(DatabaseName)].[dbo].[__MigrationLogCurrent] WHERE [migration_id] = CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER) AND [script_checksum] = '1645B4747BF4D0015923F6C7A356861CA29915F5C8F9044A93B08599E267A767')
+BEGIN
+  PRINT '----- Skipping "Programmable Objects\dbo\Stored Procedures\SpBikramAutomationCheck.sql", ID: {e29068fc-f879-53c0-ae3c-67423b967176} as there are no changes to deploy';
+  SET NOEXEC ON;
+END
+
+GO
+EXECUTE ('IF OBJECT_ID(''[dbo].[SpBikramAutomationCheck]'') IS NOT NULL
+	DROP PROCEDURE [dbo].[SpBikramAutomationCheck];
+
+');
+
+GO
+SET QUOTED_IDENTIFIER ON
+
+GO
+SET ANSI_NULLS ON
+
+GO
+EXECUTE ('-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[SpBikramAutomationCheck]
+		(@json NVARCHAR(MAX))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+			SELECT @json
+END
+');
+
+GO
+SET NOEXEC OFF;
+
+GO
+IF N'$(IsSqlCmdEnabled)' <> N'True'
+  SET NOEXEC ON;
+
+GO
+IF NOT EXISTS (SELECT 1 FROM [$(DatabaseName)].[dbo].[__MigrationLogCurrent] WHERE [migration_id] = CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER) AND [script_checksum] = '1645B4747BF4D0015923F6C7A356861CA29915F5C8F9044A93B08599E267A767')
+  PRINT '***** FINISHED EXECUTING MIGRATION "Programmable Objects\dbo\Stored Procedures\SpBikramAutomationCheck.sql", ID: {e29068fc-f879-53c0-ae3c-67423b967176} *****
+';
+
+GO
+IF NOT EXISTS (SELECT 1 FROM [$(DatabaseName)].[dbo].[__MigrationLogCurrent] WHERE [migration_id] = CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER) AND [script_checksum] = '1645B4747BF4D0015923F6C7A356861CA29915F5C8F9044A93B08599E267A767')
+  INSERT [$(DatabaseName)].[dbo].[__MigrationLog] ([migration_id], [script_checksum], [script_filename], [complete_dt], [applied_by], [deployed], [version], [package_version], [release_version])
+  VALUES                                         (CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER), '1645B4747BF4D0015923F6C7A356861CA29915F5C8F9044A93B08599E267A767', 'Programmable Objects\dbo\Stored Procedures\SpBikramAutomationCheck.sql', SYSDATETIME(), SYSTEM_USER, 1, NULL, '$(PackageVersion)', CASE '$(ReleaseVersion)' WHEN '' THEN NULL ELSE '$(ReleaseVersion)' END);
 
 GO
 PRINT '# Committing transaction';
