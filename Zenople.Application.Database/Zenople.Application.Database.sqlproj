@@ -172,6 +172,9 @@
     <Folder Include="Schema-Model\" />
     <Folder Include="Schema-Model\dbo\" />
     <Folder Include="Schema-Model\dbo\Tables\" />
+    <Folder Include="Programmable Objects\" />
+    <Folder Include="Programmable Objects\dbo\" />
+    <Folder Include="Programmable Objects\dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Provisioning\CreateDatabase.sql" />
@@ -186,5 +189,8 @@
   <ItemGroup>
     <None Include="Migrations\001_20220428-2023_bikram.neupane.sql" />
     <None Include="Schema-Model\dbo\Tables\PERSON.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Programmable Objects\dbo\Stored Procedures\SpBikramAutomationCheck.sql" />
   </ItemGroup>
 </Project>

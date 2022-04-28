@@ -1,0 +1,16 @@
+D:\Bikram\ZenopleDb\Zenople.Application.Database\bin\Debug\Zenople.Application.Database_Package.sql
+D:\Bikram\ZenopleDb\Zenople.Application.Database\bin\Debug\Zenople.Application.Database_DeployPackage.ps1
+D:\Bikram\ZenopleDb\Zenople.Application.Database\bin\Debug\
+D:\Bikram\ZenopleDb\Zenople.Application.Database\bin\Debug\Zenople.Application.Database.dll
+D:\Bikram\ZenopleDb\Zenople.Application.Database\bin\Debug\Zenople.Application.Database.pdb
+D:\Bikram\ZenopleDb\Zenople.Application.Database\bin\Debug\mscorlib.dll
+D:\Bikram\ZenopleDb\Zenople.Application.Database\bin\Debug\normidna.nlp
+D:\Bikram\ZenopleDb\Zenople.Application.Database\bin\Debug\normnfc.nlp
+D:\Bikram\ZenopleDb\Zenople.Application.Database\bin\Debug\normnfd.nlp
+D:\Bikram\ZenopleDb\Zenople.Application.Database\bin\Debug\normnfkc.nlp
+D:\Bikram\ZenopleDb\Zenople.Application.Database\bin\Debug\normnfkd.nlp
+D:\Bikram\ZenopleDb\Zenople.Application.Database\obj\Debug\Zenople.Application.Database.sqlprojResolveAssemblyReference.cache
+D:\Bikram\ZenopleDb\Zenople.Application.Database\obj\Debug\Zenople.Application.Database_Provisioning.sql
+D:\Bikram\ZenopleDb\Zenople.Application.Database\obj\Debug\Zenople.Application.Database_Package.sql
+D:\Bikram\ZenopleDb\Zenople.Application.Database\obj\Debug\Zenople.Application.Database.dll
+D:\Bikram\ZenopleDb\Zenople.Application.Database\obj\Debug\Zenople.Application.Database.pdb
