@@ -1,2 +1,9 @@
-ALTER TABLE dbo.PERSON 
-ADD zzzz VARCHAR(50)
+
+
+INSERT INTO dbo.PERSON
+(
+    NAME
+)
+VALUES
+('bikram' -- NAME - varchar(50)
+    )

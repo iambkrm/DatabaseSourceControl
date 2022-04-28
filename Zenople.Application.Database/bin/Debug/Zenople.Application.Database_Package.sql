@@ -1,5 +1,5 @@
 ﻿/*
-    Generated date:     2022-04-28T21:00:30Z
+    Generated date:     2022-04-28T21:20:31Z
     Generated on:       AQ-DELL2203PC98
     Package version:    
     Migration version:  (n/a)
@@ -443,6 +443,22 @@ Post-Deployment Script Template
 
 GO
 ----------------------- END POST-DEPLOYMENT SCRIPT: "Post-Deployment\01_Finalize_Deployment.sql" -------------------------
+
+SET IMPLICIT_TRANSACTIONS, NUMERIC_ROUNDABORT OFF;
+SET ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS, ARITHABORT, CONCAT_NULL_YIELDS_NULL, NOCOUNT, QUOTED_IDENTIFIER ON;
+IF DB_NAME() != '$(DatabaseName)'
+  USE [$(DatabaseName)];
+
+GO
+
+PRINT '----- executing post-deployment script "Post-Deployment\02_bikram_deployment.sql" -----';
+GO
+
+----------------------- BEGIN POST-DEPLOYMENT SCRIPT: "Post-Deployment\02_bikram_deployment.sql" -------------------------
+ALTER TABLE dbo.PERSON 
+ADD zzzz VARCHAR(50)
+GO
+------------------------ END POST-DEPLOYMENT SCRIPT: "Post-Deployment\02_bikram_deployment.sql" --------------------------
 
 SET IMPLICIT_TRANSACTIONS, NUMERIC_ROUNDABORT OFF;
 SET ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS, ARITHABORT, CONCAT_NULL_YIELDS_NULL, NOCOUNT, QUOTED_IDENTIFIER ON;
