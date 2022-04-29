@@ -19,8 +19,8 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-			SELECT 'bikram'
+		 
 			SELECT @json
-			SELECT 1
+			 
 END
 GO
