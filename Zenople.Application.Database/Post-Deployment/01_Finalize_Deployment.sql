@@ -10,5 +10,5 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
-:r .\Post-Deployment\02_bikram_deployment.sql
+:r Post-Deployment/02_bikram_deployment.sql
  

@@ -1,5 +1,5 @@
 ﻿/*
-    Generated date:     2022-04-29T15:13:38Z
+    Generated date:     2022-04-29T15:24:18Z
     Generated on:       AQ-DELL2203PC98
     Package version:    
     Migration version:  (n/a)
@@ -442,7 +442,7 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
-:r .\Post-Deployment\02_bikram_deployment.sql
+:r Post-Deployment/02_bikram_deployment.sql
  
 GO
 ----------------------- END POST-DEPLOYMENT SCRIPT: "Post-Deployment\01_Finalize_Deployment.sql" -------------------------
