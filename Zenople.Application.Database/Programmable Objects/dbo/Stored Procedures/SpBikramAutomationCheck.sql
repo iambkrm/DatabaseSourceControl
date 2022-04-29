@@ -21,6 +21,8 @@ BEGIN
 
 		 
 			SELECT @json
+
+			SELECT 1
 			 
 END
 GO

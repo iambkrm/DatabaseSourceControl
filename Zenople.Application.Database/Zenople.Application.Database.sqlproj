@@ -10,8 +10,7 @@
     <ProjectGuid>{e744eb5f-21d3-4b57-b8eb-645ccbc65a44}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
-    <RootPath>
-    </RootPath>
+    <RootPath></RootPath>
     <RootNamespace>Zenople.Application.Database</RootNamespace>
     <AssemblyName>Zenople.Application.Database</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
