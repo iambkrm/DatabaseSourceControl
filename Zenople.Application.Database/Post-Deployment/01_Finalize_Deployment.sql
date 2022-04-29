@@ -10,4 +10,4 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
-:r 02_bikram_deployment.sql
+--:r 02_bikram_deployment.sql
