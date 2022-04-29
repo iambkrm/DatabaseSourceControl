@@ -21,5 +21,6 @@ BEGIN
 
 			SELECT 'bikram'
 			SELECT @json
+			SELECT 1
 END
 GO
