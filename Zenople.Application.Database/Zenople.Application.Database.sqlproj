@@ -193,7 +193,4 @@
   <ItemGroup>
     <None Include="Programmable Objects\dbo\Stored Procedures\SpBikramAutomationCheck.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <PostDeploy Include="Post-Deployment\Script.PostDeployment1.sql" />
-  </ItemGroup>
 </Project>
