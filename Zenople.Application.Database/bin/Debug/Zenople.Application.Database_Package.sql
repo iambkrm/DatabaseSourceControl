@@ -1,5 +1,5 @@
 ﻿/*
-    Generated date:     2022-04-28T21:20:31Z
+    Generated date:     2022-04-29T13:46:07Z
     Generated on:       AQ-DELL2203PC98
     Package version:    
     Migration version:  (n/a)
@@ -341,13 +341,13 @@ IF DB_NAME() != '$(DatabaseName)'
   USE [$(DatabaseName)];
 
 GO
-IF NOT EXISTS (SELECT 1 FROM [$(DatabaseName)].[dbo].[__MigrationLogCurrent] WHERE [migration_id] = CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER) AND [script_checksum] = '72873CD52365D50138B46F69A5DB01396DAD7A21F546CF9DAEF77995F2A01052')
+IF NOT EXISTS (SELECT 1 FROM [$(DatabaseName)].[dbo].[__MigrationLogCurrent] WHERE [migration_id] = CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER) AND [script_checksum] = '5DBCFC9D1CBC345CD79790D66C65FFA437A793692FB619D2F1790113338EB5E9')
   PRINT '
 
 ***** EXECUTING MIGRATION "Programmable Objects\dbo\Stored Procedures\SpBikramAutomationCheck.sql", ID: {e29068fc-f879-53c0-ae3c-67423b967176} *****';
 
 GO
-IF EXISTS (SELECT 1 FROM [$(DatabaseName)].[dbo].[__MigrationLogCurrent] WHERE [migration_id] = CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER) AND [script_checksum] = '72873CD52365D50138B46F69A5DB01396DAD7A21F546CF9DAEF77995F2A01052')
+IF EXISTS (SELECT 1 FROM [$(DatabaseName)].[dbo].[__MigrationLogCurrent] WHERE [migration_id] = CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER) AND [script_checksum] = '5DBCFC9D1CBC345CD79790D66C65FFA437A793692FB619D2F1790113338EB5E9')
 BEGIN
   PRINT '----- Skipping "Programmable Objects\dbo\Stored Procedures\SpBikramAutomationCheck.sql", ID: {e29068fc-f879-53c0-ae3c-67423b967176} as there are no changes to deploy';
   SET NOEXEC ON;
@@ -381,6 +381,7 @@ BEGIN
 
 			SELECT ''bikram''
 			SELECT @json
+			SELECT 1
 END
 ');
 
@@ -392,14 +393,14 @@ IF N'$(IsSqlCmdEnabled)' <> N'True'
   SET NOEXEC ON;
 
 GO
-IF NOT EXISTS (SELECT 1 FROM [$(DatabaseName)].[dbo].[__MigrationLogCurrent] WHERE [migration_id] = CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER) AND [script_checksum] = '72873CD52365D50138B46F69A5DB01396DAD7A21F546CF9DAEF77995F2A01052')
+IF NOT EXISTS (SELECT 1 FROM [$(DatabaseName)].[dbo].[__MigrationLogCurrent] WHERE [migration_id] = CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER) AND [script_checksum] = '5DBCFC9D1CBC345CD79790D66C65FFA437A793692FB619D2F1790113338EB5E9')
   PRINT '***** FINISHED EXECUTING MIGRATION "Programmable Objects\dbo\Stored Procedures\SpBikramAutomationCheck.sql", ID: {e29068fc-f879-53c0-ae3c-67423b967176} *****
 ';
 
 GO
-IF NOT EXISTS (SELECT 1 FROM [$(DatabaseName)].[dbo].[__MigrationLogCurrent] WHERE [migration_id] = CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER) AND [script_checksum] = '72873CD52365D50138B46F69A5DB01396DAD7A21F546CF9DAEF77995F2A01052')
+IF NOT EXISTS (SELECT 1 FROM [$(DatabaseName)].[dbo].[__MigrationLogCurrent] WHERE [migration_id] = CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER) AND [script_checksum] = '5DBCFC9D1CBC345CD79790D66C65FFA437A793692FB619D2F1790113338EB5E9')
   INSERT [$(DatabaseName)].[dbo].[__MigrationLog] ([migration_id], [script_checksum], [script_filename], [complete_dt], [applied_by], [deployed], [version], [package_version], [release_version])
-  VALUES                                         (CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER), '72873CD52365D50138B46F69A5DB01396DAD7A21F546CF9DAEF77995F2A01052', 'Programmable Objects\dbo\Stored Procedures\SpBikramAutomationCheck.sql', SYSDATETIME(), SYSTEM_USER, 1, NULL, '$(PackageVersion)', CASE '$(ReleaseVersion)' WHEN '' THEN NULL ELSE '$(ReleaseVersion)' END);
+  VALUES                                         (CAST ('e29068fc-f879-53c0-ae3c-67423b967176' AS UNIQUEIDENTIFIER), '5DBCFC9D1CBC345CD79790D66C65FFA437A793692FB619D2F1790113338EB5E9', 'Programmable Objects\dbo\Stored Procedures\SpBikramAutomationCheck.sql', SYSDATETIME(), SYSTEM_USER, 1, NULL, '$(PackageVersion)', CASE '$(ReleaseVersion)' WHEN '' THEN NULL ELSE '$(ReleaseVersion)' END);
 
 GO
 PRINT '# Committing transaction';
@@ -455,8 +456,15 @@ PRINT '----- executing post-deployment script "Post-Deployment\02_bikram_deploym
 GO
 
 ----------------------- BEGIN POST-DEPLOYMENT SCRIPT: "Post-Deployment\02_bikram_deployment.sql" -------------------------
-ALTER TABLE dbo.PERSON 
-ADD zzzz VARCHAR(50)
+
+
+INSERT INTO dbo.PERSON
+(
+    NAME
+)
+VALUES
+('bikram' -- NAME - varchar(50)
+    )
 GO
 ------------------------ END POST-DEPLOYMENT SCRIPT: "Post-Deployment\02_bikram_deployment.sql" --------------------------
 
